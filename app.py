@@ -4,7 +4,22 @@ import numpy as np
 
 model = joblib.load('LYKN_model.pkl')
 
-st.set_page_config(page_title="LYKN Views Prediction", page_icon="🐺")
+st.set_page_config(page_title="LYKN Views Prediction", page_icon="🐺", layout="centered")
+
+st.markdown("""
+    <style>
+    .stApp {
+        background-color: #0E1117;
+        color: #FFFFFF;
+    }
+    /* ปรับสีปุ่ม */
+    div.stButton > button:first-child {
+        background-color: #d32f2f;
+        color: white;
+        border-radius: 10px;
+    }
+    </style>        
+    """, unsafe_allow_html=True)
 
 st.title("LYKN Views Prediction🐺")
 st.write("ระบบทำนายยอดวิวเพลงของวง LYKN")
